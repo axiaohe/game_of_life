@@ -1,46 +1,48 @@
 /* Game of Life
-Conway's Game Of Life is an easy realization of a cellular automaton, which
-models dynamic but discrete systems. In this project, we create a simulation
-that realizes such systems.
-
-Background
-We consider an arbitrary grid of squares. Each component of the grid is called a
-(biological) cell. At the beginning (t=0), all cells are either "dead" or
-"alive". Now we are going to add dynamics to the scene by applying the following
-rules at any time step t = t + 1: A living cell
-
-stays alive, if it hast exact 2 or 3 neighbors
-dies due to loneliness if it has fewer neighbors
-dies du to overpopulation if it has more neighbors
-
-A dead cell
-
-will be reborn if it has exactly 3 neighbors
-remains dead otherwise
-
-Be aware that updates to the cells are performed in parallel and that a neighbor
-of a cell is defined by edges and vertices ,i.e. any cell that is not located at
-the boundaries of the grid has exactly 8 neighbors.
-*/
+ *
+ * Conway's Game Of Life is an easy realization of a cellular automaton, which
+ * models dynamic but discrete systems. In this project, we create a simulation
+ * that realizes such systems.
+ *
+ * Background
+ * We consider an arbitrary grid of squares. Each component of the grid is
+ * called a (biological) cell. At the beginning (t=0), all cells are either
+ * "dead" or "alive". Now we are going to add dynamics to the scene by applying
+ * the following rules at any time step t = t + 1: A living cell
+ *
+ * stays alive, if it hast exact 2 or 3 neighbors
+ * dies due to loneliness if it has fewer neighbors
+ * dies du to overpopulation if it has more neighbors
+ *
+ * A dead cell
+ *
+ * will be reborn if it has exactly 3 neighbors
+ * remains dead otherwise
+ *
+ * Be aware that updates to the cells are performed in parallel and that a
+ * neighbor of a cell is defined by edges and vertices ,i.e. any cell that is
+ * not located at the boundaries of the grid has exactly 8 neighbors.
+ */
 
 /* Sprint 1
-In this sprint, we want to create a first prototype that simulates the system.
-The basic logic needed to store, update and display grids of cells should be in
-place by the end of the sprint.
-
-Definition of "done":
-
-Primitive data types for the grid and cells are specified and implemented
-A file format to define grids of cells is specified. (this should be a simple
-text-based format e.g. (0=dead, 1=alive), optimizations can come later) The
-specified file format can be read into the specified data types (this tutorial
-may be helpful), edge cases are handled appropriately The simulation per time
-step as described above is implemented (hint: use an additional grid that holds
-the grid at t+1) The grid gets printed to the console after every update Basic
-test cases are implemented to verify that the simulation works as expected (some
-grids found on wikipedia can be used) (optional) Unit tests are implemented
-(preferably using a testing library like gtest )
-*/
+ *
+ * In this sprint, we want to create a first prototype that simulates the
+ * system. The basic logic needed to store, update and display grids of cells
+ * should be in place by the end of the sprint.
+ *
+ * Definition of "done":
+ *
+ * Primitive data types for the grid and cells are specified and implemented
+ * A file format to define grids of cells is specified. (this should be a simple
+ * text-based format e.g. (0=dead, 1=alive), optimizations can come later) The
+ * specified file format can be read into the specified data types (this
+ * tutorial may be helpful), edge cases are handled appropriately The simulation
+ * per time step as described above is implemented (hint: use an additional grid
+ * that holds the grid at t+1) The grid gets printed to the console after every
+ * update Basic test cases are implemented to verify that the simulation works
+ * as expected (some grids found on wikipedia can be used) (optional) Unit tests
+ * are implemented (preferably using a testing library like gtest )
+ */
 
 #include <algorithm>
 #include <chrono>
